@@ -6,6 +6,14 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const depositField = document.getElementById('deposite-field');
     const depositAmount = depositField.value;
 
+
+    depositField.value="";
+    
+    if(isNaN(depositAmount)){
+        alert('Please enter a valid number');
+        return;
+    }
+
     //step-3 get the current deposit total
 
     const depositTotalElement = document.getElementById('deposit-total');
@@ -28,6 +36,6 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     
 
     //step-7
-    depositField.value="";
+    //depositField.value="";
     
 })
